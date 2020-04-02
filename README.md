@@ -1,20 +1,10 @@
 # AceBook
 
+A clone of facebook, built using the Ruby on Rails web framework
+
 REQUIRED INSTRUCTIONS:
 
-1. Fork this repository to `acebook-teamname` and customize
-the below**
-
-[You can find the engineering project outline here.](https://github.com/makersacademy/course/tree/master/engineering_projects/rails)
-
-2. The card wall is here: <please update>
-
-## How to contribute to this project
-See [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## Quickstart
-
-First, clone this repository. Then:
+1. Fork and clone this repository, then:
 
 ```bash
 > bundle install
@@ -23,4 +13,5 @@ First, clone this repository. Then:
 
 > bundle exec rspec # Run the tests to ensure it works
 > bin/rails server # Start the server at localhost:3000
+> visit http://localhost:3000/posts
 ```
