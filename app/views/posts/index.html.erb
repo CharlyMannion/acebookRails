@@ -1,5 +1,9 @@
 <h1>Welcome to Acebook!</h1>
 
+<%= link_to new_user_path do %>
+  Sign up
+<% end %>
+
 <h2>Timeline:</h2>
 <% @posts.each do |post| %>
   <p><%= post.message %></p>
@@ -7,8 +11,4 @@
 
 <%= link_to new_post_path do %>
   New post
-<% end %>
-
-<%= link_to new_user_path do %>
-  Sign up
 <% end %>
