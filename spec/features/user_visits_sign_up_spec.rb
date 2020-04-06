@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature "Sign up", type: :feature do
   scenario "Can navigate to sign up page" do
     visit "/posts"
-    click_on "Sign up"
+    click_on "Sign Up"
     expect(page).to have_content("Enter details")
   end
 
