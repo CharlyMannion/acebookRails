@@ -15,6 +15,8 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:message).merge(user_id: current_user.id)
+    p "current user below"
+    p current_user
+    params.require(:post).permit(:message).merge(user: current_user)
   end
 end
