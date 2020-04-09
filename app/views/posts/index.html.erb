@@ -12,10 +12,28 @@
 <p id="notice"><%= notice %></p>
 
 <h2>Timeline:</h2>
-<% @posts.each do |post| %>
+
+  <% @posts.each do |post| %>
+  <div class="item">
+
   <p><%= post.message %></p>
-  <p><%= @user = (User.find_by(id: post.user_id)) %></p>
-  <p><%= p @user %></p>
+
+  <% Time.zone = 'London' %>
+  <div class='user'>
+    <% @user = (User.find_by(id: post.user_id)) %>
+
+      </div>
+      <div class='post-username'>
+        <div class='username'>
+          <%= p @user %>
+        </div>
+
+        <div class='timestamp'>
+          <%= post.created_at.strftime("%e %B %Y %H:%M") %>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <% end %>
 
