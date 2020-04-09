@@ -16,20 +16,23 @@
   <% @posts.each do |post| %>
   <div class="item">
 
-  <p><%= post.message %></p>
+  <p>MESSAGE: <%= post.message %></p>
 
   <% Time.zone = 'London' %>
   <div class='user'>
-    <% @user = (User.find_by(id: post.user_id)) %>
+    @user = <%= @user = (User.find_by(id: post.user_id)) %>
+    @user <%= p @user %>
+    post.user <%= p post.user %>
+
 
       </div>
       <div class='post-username'>
         <div class='username'>
-          <%= p @user %>
+          WRITTEN BY: <%= p @user %>
         </div>
 
         <div class='timestamp'>
-          <%= post.created_at.strftime("%e %B %Y %H:%M") %>
+          DATE/TIME: <%= post.created_at.strftime("%e %B %Y %H:%M") %>
         </div>
       </div>
     </div>
