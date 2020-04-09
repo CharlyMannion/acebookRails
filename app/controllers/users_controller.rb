@@ -12,6 +12,11 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def show
+    @user = User.find_by(id: current_user.id)
+    @posts = @user.posts
+  end
+
   private
 
   def user_params
