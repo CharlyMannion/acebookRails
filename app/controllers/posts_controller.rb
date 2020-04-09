@@ -12,6 +12,11 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def post_user(post)
+    @user = (User.find_by(id: post.user_id))
+    @post_username = @user.username
+  end
+
   private
 
   def post_params

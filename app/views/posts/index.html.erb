@@ -14,7 +14,8 @@
 <h2>Timeline:</h2>
 <% @posts.each do |post| %>
   <p><%= post.message %></p>
-  <p><%= post.user %></p>
+  <p><%= @user = (User.find_by(id: post.user_id)) %></p>
+  <p><%= p @user %></p>
 
 <% end %>
 
